@@ -149,10 +149,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    font-size: clamp(60px, 14vw, 130px);
+    gap: 2px;
+    flex-wrap: wrap;
+    font-size: clamp(38px, 8vw, 80px);
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.1;
     text-shadow: 0 0 40px var(--pink), 0 0 80px var(--purple);
     margin-bottom: 4px;
 }
