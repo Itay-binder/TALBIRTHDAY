@@ -791,6 +791,182 @@ body {
     100% { transform: translateY(-90px) scale(1.4); opacity: 0; }
 }
 
+/* ===================== GIFT REVEAL ===================== */
+.gift-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 0, 20, 0.97);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow-y: auto;
+}
+
+.gift-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gift-modal-inner {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 20px 0 40px;
+}
+
+.gift-close {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+}
+.gift-close:hover { background: var(--pink); }
+
+.gift-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    animation: giftFadeUp 0.6s ease 0.1s both;
+}
+
+.gift-bow {
+    font-size: 40px;
+    display: inline-block;
+    animation: giftBounce 1.2s cubic-bezier(.36,.07,.19,.97) var(--d, 0s) both;
+    filter: drop-shadow(0 0 12px rgba(247,37,133,0.7));
+}
+
+.gift-title {
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold), var(--pink), var(--rose));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gift-bags {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.gift-bag-card {
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    animation: giftReveal 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both;
+}
+
+.gift-bag-img-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(247, 37, 133, 0.35);
+    box-shadow: 0 0 40px rgba(247, 37, 133, 0.2), 0 20px 60px rgba(0,0,0,0.6);
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-bag-img-wrap:hover {
+    transform: scale(1.04) rotate(1deg);
+    box-shadow: 0 0 60px rgba(247, 37, 133, 0.45), 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.gift-bag-img-wrap img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.bag-label {
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--light-pink);
+    letter-spacing: 1px;
+}
+
+.gift-message {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(247, 37, 133, 0.25);
+    border-radius: 20px;
+    padding: 28px 32px;
+    font-size: clamp(15px, 2.5vw, 18px);
+    line-height: 1.9;
+    color: rgba(255,255,255,0.9);
+    animation: giftFadeUp 0.7s ease var(--d, 1s) both;
+    text-align: right;
+}
+
+.gift-tagline {
+    margin-top: 16px;
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 700;
+    color: var(--pink);
+    text-align: center;
+}
+
+/* Floating sparkles inside bag card */
+.gift-sparkles::before,
+.gift-sparkles::after {
+    content: '✨';
+    position: absolute;
+    font-size: 22px;
+    animation: floatSparkle 2s ease-in-out infinite;
+    pointer-events: none;
+}
+.gift-sparkles::before { top: 10px; right: 10px; animation-delay: 0s; }
+.gift-sparkles::after  { bottom: 10px; left: 10px; animation-delay: 1s; }
+
+@keyframes floatSparkle {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; }
+    50%       { transform: translateY(-8px) scale(1.2); opacity: 1; }
+}
+
+@keyframes giftBounce {
+    0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+    60%  { transform: scale(1.25) rotate(10deg); opacity: 1; }
+    80%  { transform: scale(0.9) rotate(-5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes giftReveal {
+    0%   { opacity: 0; transform: translateY(50px) scale(0.8); }
+    60%  { transform: translateY(-8px) scale(1.03); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes giftFadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 500px) {
+    .gift-bags    { flex-direction: column; align-items: center; }
+    .gift-bag-card { min-width: 260px; }
+    .gift-message { padding: 20px 18px; }
+}
+
 /* ===================== LIGHTBOX ===================== */
 .lightbox {
     position: fixed;

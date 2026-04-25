@@ -358,7 +358,9 @@ function startFloatingHearts() {
 // ─────────────────────────────────────────────
 function celebrate() {
   launchBirthdayConfetti();
-  const emojis = ['🎊','🎉','💕','⭐','✨','🌟','💖','🎀'];
+
+  // Sparkle burst across screen
+  const emojis = ['🎊','🎉','💕','⭐','✨','🌟','💖','🎀','🎁'];
   for (let i = 0; i < 40; i++) {
     setTimeout(() => {
       const el = document.createElement('div');
@@ -374,7 +376,33 @@ function celebrate() {
       setTimeout(() => el.remove(), 1200);
     }, i * 45);
   }
+
+  // Open gift reveal after a short dramatic pause
+  setTimeout(openGift, 1200);
 }
+
+function openGift() {
+  document.getElementById('gift-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Second wave of confetti inside the gift reveal
+  setTimeout(launchBirthdayConfetti, 400);
+}
+
+function closeGift() {
+  document.getElementById('gift-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close gift on backdrop click
+document.addEventListener('click', e => {
+  const modal = document.getElementById('gift-modal');
+  if (e.target === modal) closeGift();
+});
+
+// ESC closes gift modal too
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeGift();
+});
 
 function launchBirthdayConfetti() {
   const colors = ['#f72585','#ffd700','#ff69b4','#7c3aed','#00bcd4','#ff6b6b','#4ecdc4','#a8ff3e'];

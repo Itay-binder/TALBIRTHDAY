@@ -119,12 +119,47 @@
                     ❤️ תמיד שלך, איתי ❤️
                 </p>
                 <button class="celebrate-btn animate-on-scroll" onclick="celebrate()">
-                    🎆 לחץ לחגוג! 🎆
+                    🎁 לעוד הפתעות 🎁
                 </button>
             </div>
         </section>
 
     </main>
+
+    <!-- ==================== GIFT REVEAL ==================== -->
+    <div id="gift-modal" class="gift-modal">
+        <div class="gift-modal-inner">
+            <button class="gift-close" onclick="closeGift()">✕</button>
+
+            <div class="gift-header">
+                <span class="gift-bow" style="--d:0s">🎀</span>
+                <h2 class="gift-title">ההפתעות שלך!</h2>
+                <span class="gift-bow" style="--d:.15s">🎁</span>
+            </div>
+
+            <div class="gift-bags">
+                <div class="gift-bag-card" style="--d:.3s">
+                    <div class="gift-bag-img-wrap">
+                        <img src="images/gift1.webp" alt="תיק נסיעות">
+                        <div class="gift-sparkles"></div>
+                    </div>
+                    <p class="bag-label">תיק נסיעות 🧳</p>
+                </div>
+                <div class="gift-bag-card" style="--d:.7s">
+                    <div class="gift-bag-img-wrap">
+                        <img src="images/gift2.webp" alt="תיק צד">
+                        <div class="gift-sparkles"></div>
+                    </div>
+                    <p class="bag-label">תיק צד 👜</p>
+                </div>
+            </div>
+
+            <div class="gift-message" style="--d:1.2s">
+                <p>רציתי לקנות לך את התיק צד בצבע החום אבל בדקתי איתם ואין להם וכנראה גם לא יהיה — אז אמרתי שנקנה לך את הצבע השני ועוד תיק 😊</p>
+                <p class="gift-tagline">מקסימום תחליפי ❤️</p>
+            </div>
+        </div>
+    </div>
 
     <!-- ==================== LIGHTBOX ==================== -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
