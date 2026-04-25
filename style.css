@@ -371,6 +371,23 @@ body {
     margin: 0 auto;
 }
 
+.book-page.title-only .memory-title {
+    font-size: clamp(26px, 5.5vw, 46px);
+    margin-bottom: 0;
+    text-shadow: 0 0 30px rgba(247, 37, 133, 0.4);
+}
+
+.book-page.title-only .memory-emoji {
+    font-size: 80px;
+    margin-bottom: 18px;
+}
+
+.book-page.title-only .memory-photo-wrap {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
 .book-controls {
     display: flex;
     align-items: center;

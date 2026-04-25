@@ -3,65 +3,18 @@
 // =============================================
 
 // ─────────────────────────────────────────────
-//  זכרונות אמיתיים שלכם
+//  מה שמחכה לנו — חלומות ביחד 💕
 // ─────────────────────────────────────────────
 const memories = [
-  {
-    emoji: '🥾',
-    title: 'ההתחלה שלנו',
-    date: 'נובמבר 2016',
-    description: 'הטיול הראשון שלנו ביחד — על גבעה בישראל, עם כל העולם לפנינו. לא ידעתי אז לאיפה ביחד נגיע, אבל כבר ידעתי שאני רוצה להמשיך לצדה.',
-    photo: 'images/photo_001.jpg'
-  },
-  {
-    emoji: '🌊',
-    title: 'הטיולים בארץ שלנו',
-    date: 'שנים של הרפתקאות',
-    description: 'מפלים, נחלים, הרים ושמורות — כיסינו את כל הארץ ביחד. כל טיול היה הרפתקה חדשה, כל נוף — זיכרון שישאר לנצח.',
-    photo: 'images/photo_020.jpg'
-  },
-  {
-    emoji: '🌅',
-    title: 'שקיעות ביחד',
-    date: 'רגעים שקטים ומושלמים',
-    description: 'לשבת ביחד בשקיעה ולהסתכל על האופק — בלי מילים, בלי כלום. הרגעים האלה, הפשוטים והשקטים, הם הרגעים שאני אוהב הכי הרבה.',
-    photo: 'images/photo_035.jpg'
-  },
-  {
-    emoji: '💋',
-    title: 'תאילנד — הנשיקה',
-    date: 'קיץ 2024',
-    description: 'על סירת זנב-ארוך בלב ים תאילנד, עם הסלעים הירוקים מסביב — הנשיקה הכי יפה שנשקתי. תאילנד הייתה קסם, אבל הקסם הכי גדול היית את.',
-    photo: 'images/photo_080.jpg'
-  },
-  {
-    emoji: '🏝️',
-    title: 'קו פי פי — מבט מלמעלה',
-    date: 'תאילנד 2024',
-    description: 'עמדנו על הפסגה ומבטנו השתרע על הכל — האי הירוק, הים הטורקיז, האופק האינסופי. ידעתי שבשום מקום בעולם לא הייתי מעדיף להיות — רק לצדה.',
-    photo: 'images/photo_175.jpg'
-  },
-  {
-    emoji: '🗾',
-    title: 'יפן — חלום שהתגשם',
-    date: 'סתיו 2025',
-    description: 'שינג\'וקו בלילה, קיוטו בשחר — כל פינה ביפן הייתה קסם אחר. ביחד חווינו מדינה שלמה של פלאים, ויצרנו זיכרונות שיישארו לנצח.',
-    photo: 'images/photo_140.jpg'
-  },
-  {
-    emoji: '⛵',
-    title: 'ים ושמיים',
-    date: 'יוון 2026',
-    description: 'פנים מחייכות, רוח ים, מים כחולים עד האופק — ובקרן הרחוקה ספינה שטה. רגע מושלם, קפוא בזמן, שניצרב לתמיד בזיכרון.',
-    photo: 'images/photo_185.jpg'
-  },
-  {
-    emoji: '💃',
-    title: 'ביחד, תמיד',
-    date: '2026',
-    description: 'לרקוד, לצחוק, לחגוג — ביחד הכל יותר שמח. כל מסיבה, כל אירוע, כל רגע הופך לזיכרון כשאת לצידי. זה הסיפור שלנו, וזה רק ממשיך.',
-    photo: 'images/photo_188.jpg'
-  }
+  { emoji: '🌿', title: 'עוד טיולים בארץ',       photo: 'images/photo_120.jpg' },
+  { emoji: '✈️', title: 'עוד הרפתקאות בחו"ל',    photo: 'images/photo_175.jpg' },
+  { emoji: '🌅', title: 'עוד שקיעות ביחד',        photo: 'images/photo_035.jpg' },
+  { emoji: '🏃', title: 'מרתונים ביחד',           photo: 'images/photo_065.jpg' },
+  { emoji: '🍽️', title: 'עוד מסעדות ומקומות',     photo: 'images/photo_170.jpg' },
+  { emoji: '🎉', title: 'עוד מסיבות וחגיגות',     photo: 'images/photo_188.jpg' },
+  { emoji: '💃', title: 'לרקוד תמיד',             photo: 'images/photo_080.jpg' },
+  { emoji: '🏡', title: 'שנגור במושב ביחד',       photo: 'images/photo_095.jpg' },
+  { emoji: '❤️', title: 'לנצח ביחד',             photo: 'images/photo_185.jpg' },
 ];
 
 // ─────────────────────────────────────────────
@@ -222,16 +175,14 @@ function renderMemories() {
 
   memories.forEach((m, i) => {
     const page = document.createElement('div');
-    page.className = 'book-page' + (i === 0 ? ' active' : '');
+    page.className = 'book-page title-only' + (i === 0 ? ' active' : '');
     page.innerHTML = `
       ${m.photo ? `
         <div class="memory-photo-wrap">
           <img class="memory-photo" src="${m.photo}" alt="${m.title}" loading="lazy">
         </div>` : ''}
       <span class="memory-emoji">${m.emoji}</span>
-      <div class="memory-date">${m.date}</div>
       <h3 class="memory-title">${m.title}</h3>
-      <p class="memory-description">${m.description}</p>
     `;
     pagesEl.appendChild(page);
 
