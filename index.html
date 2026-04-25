@@ -11,10 +11,7 @@
 </head>
 <body>
 
-    <!-- Background Canvas -->
     <canvas id="stars-canvas"></canvas>
-
-    <!-- Balloons Container -->
     <div id="balloons-container"></div>
 
     <!-- Loading Screen -->
@@ -36,6 +33,7 @@
 
         <!-- ==================== HERO ==================== -->
         <section class="section" id="section-hero">
+            <div class="section-photo-bg" id="hero-bg"></div>
             <div class="hero-inner">
                 <div class="cake-emoji animate-float">🎂</div>
                 <h1 class="hero-greeting">יום הולדת שמח</h1>
@@ -46,25 +44,26 @@
                     <span class="name-heart" style="--i:8">💕</span>
                 </h2>
                 <p class="hero-sub">לקוצ'י שלי, אהבת חיי</p>
+                <div class="hero-years">2016 — 2026 ✨</div>
                 <div class="scroll-hint">
                     <span class="scroll-text">גלול למטה</span>
                     <div class="scroll-arrow"></div>
                 </div>
             </div>
-            <div class="hero-particles" id="hero-particles"></div>
         </section>
 
         <!-- ==================== LOVE LETTER ==================== -->
         <section class="section" id="section-letter">
+            <div class="section-photo-bg" id="letter-bg"></div>
             <div class="container">
                 <div class="letter-card animate-on-scroll">
                     <div class="letter-icon">💌</div>
                     <h2 class="section-heading">מכתב מהלב</h2>
                     <div class="letter-body">
                         <p class="letter-salutation">קוצ'י שלי היקרה,</p>
-                        <p>היום יום הולדתך, ואני רוצה שתדעי כמה את מיוחדת לי. מהרגע שנכנסת לחיי, הכל פשוט הפך ליותר יפה, יותר שלם, יותר נכון.</p>
-                        <p>כל בוקר שאני מתעורר לצדך הוא מתנה. כל חיוך שלך מאיר לי את היום. כל רגע שאנחנו ביחד — הוא הרגע שאני שומר הכי עמוק בלב.</p>
-                        <p>את לא רק בת הזוג שלי — את החברה הכי טובה שלי, השלמה שלי, הבית שלי.</p>
+                        <p>היום יום הולדתך, ואני רוצה שתדעי כמה את מיוחדת לי. מהרגע שנכנסת לחיי — מאותו טיול ראשון בישראל — הכל פשוט הפך ליותר יפה, יותר שלם, יותר נכון.</p>
+                        <p>ביחד חצינו הרים ונחלים בארץ, שטנו על סירות בתאילנד, איבדנו את עצמנו בסמטאות יפן, וראינו שקיעות שאף מצלמה לא יכלה לתפוס. כל מסע היה מושלם כי אתה הייתה לצידי.</p>
+                        <p>את לא רק בת הזוג שלי — את החברה הכי טובה שלי, השלמה שלי, הבית שלי. איפה שאת, שם אני מרגיש בבית.</p>
                         <p class="letter-closing">אוהב אותך עד אינסוף ומעבר לכך,</p>
                         <p class="letter-signature">איתי שלך ❤️</p>
                     </div>
@@ -74,18 +73,19 @@
 
         <!-- ==================== MEMORIES ==================== -->
         <section class="section" id="section-memories">
+            <div class="section-photo-bg" id="memories-bg"></div>
             <div class="container">
                 <h2 class="section-heading centered animate-on-scroll">הזכרונות שלנו 📖</h2>
-                <p class="section-sub centered animate-on-scroll">הרגעים שצבענו ביחד</p>
+                <p class="section-sub centered animate-on-scroll">10 שנים של הרפתקאות ואהבה</p>
                 <div class="book-container animate-on-scroll">
                     <div class="book" id="book">
                         <div class="book-spine"></div>
                         <div class="book-pages" id="book-pages"></div>
                     </div>
                     <div class="book-controls">
-                        <button class="book-btn" id="prev-btn" onclick="prevPage()" aria-label="הקודם">‹</button>
+                        <button class="book-btn" id="prev-btn" onclick="prevPage()">‹</button>
                         <div class="page-indicator" id="page-indicator"></div>
-                        <button class="book-btn" id="next-btn" onclick="nextPage()" aria-label="הבא">›</button>
+                        <button class="book-btn" id="next-btn" onclick="nextPage()">›</button>
                     </div>
                 </div>
             </div>
@@ -95,14 +95,17 @@
         <section class="section" id="section-photos">
             <div class="container">
                 <h2 class="section-heading centered animate-on-scroll">האלבום שלנו 📸</h2>
-                <p class="section-sub centered animate-on-scroll">כל תמונה שווה אלף מילים של אהבה</p>
+                <p class="section-sub centered animate-on-scroll">188 תמונות — כל אחת זיכרון שלנו</p>
                 <div class="photo-gallery" id="photo-gallery"></div>
-                <p class="add-photos-note animate-on-scroll">✨ תמונות נוספות יגיעו בקרוב...</p>
+                <button class="load-more-btn" id="load-more-btn" onclick="loadMorePhotos()">
+                    טען עוד תמונות ✨
+                </button>
             </div>
         </section>
 
         <!-- ==================== CLOSING ==================== -->
         <section class="section" id="section-closing">
+            <div class="section-photo-bg" id="closing-bg"></div>
             <div class="closing-inner">
                 <div class="floating-hearts" id="floating-hearts"></div>
                 <h2 class="closing-title animate-on-scroll">שנה נפלאה קוצ'י! 🎉</h2>
@@ -121,6 +124,18 @@
 
     </main>
 
+    <!-- ==================== LIGHTBOX ==================== -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button class="lb-close" onclick="closeLightbox()">✕</button>
+        <button class="lb-prev" onclick="lbPrev(event)">‹</button>
+        <div class="lb-content">
+            <img id="lb-img" src="" alt="">
+            <p id="lb-caption"></p>
+        </div>
+        <button class="lb-next" onclick="lbNext(event)">›</button>
+    </div>
+
+    <script src="photos_data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

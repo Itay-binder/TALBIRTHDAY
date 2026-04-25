@@ -3,92 +3,93 @@
 // =============================================
 
 // ─────────────────────────────────────────────
-//  ✏️  ערוך את הזכרונות כאן!
+//  זכרונות אמיתיים שלכם
 // ─────────────────────────────────────────────
 const memories = [
   {
-    emoji: '✨',
-    title: 'הפגישה הראשונה שלנו',
-    date: 'הרגע שהכל התחיל',
-    description:
-      'הפגישה הראשונה שלנו הייתה אחת מהרגעים הכי מיוחדים בחיי. לא ידעתי אז שאת עומדת לשנות את החיים שלי לנצח. אבל משהו בך גרם לי לחייך, ולזכור.'
+    emoji: '🥾',
+    title: 'ההתחלה שלנו',
+    date: 'נובמבר 2016',
+    description: 'הטיול הראשון שלנו ביחד — על גבעה בישראל, עם כל העולם לפנינו. לא ידעתי אז לאיפה ביחד נגיע, אבל כבר ידעתי שאני רוצה להמשיך לצדה.',
+    photo: 'images/photo_001.jpg'
   },
   {
-    emoji: '🌹',
-    title: 'הדייט הראשון שלנו',
-    date: 'ערב מושלם',
-    description:
-      'ישבנו, דיברנו, וצחקנו. אני זוכר שחשבתי לעצמי — אני רוצה לבלות את שאר חיי עם האישה הזו. הדייט הראשון שלנו היה מושלם בדיוק כמוך.'
-  },
-  {
-    emoji: '✈️',
-    title: 'ההרפתקה הראשונה שלנו',
-    date: 'גילוי עולמות חדשים',
-    description:
-      'ביחד גילינו מקומות חדשים, צחקנו על אבדות בדרך, ויצרנו זכרונות שלא יישכחו לעולם. עם כל יעד חדש — הרגשתי שאני בבית, כי את לצידי.'
-  },
-  {
-    emoji: '🎬',
-    title: 'ערבי הספה שלנו',
-    date: 'הרגעים הקטנים והיפים',
-    description:
-      'אחד הדברים שאני אוהב הכי הרבה זה לשבת לצדך, לראות סרט, לאכול ביחד ופשוט להיות. הרגעים הקטנים האלה הם הרגעים שמשמחים אותי הכי הרבה בעולם.'
+    emoji: '🌊',
+    title: 'הטיולים בארץ שלנו',
+    date: 'שנים של הרפתקאות',
+    description: 'מפלים, נחלים, הרים ושמורות — כיסינו את כל הארץ ביחד. כל טיול היה הרפתקה חדשה, כל נוף — זיכרון שישאר לנצח.',
+    photo: 'images/photo_020.jpg'
   },
   {
     emoji: '🌅',
-    title: 'שקיעות שראינו ביחד',
-    date: 'יופי שנחצב בזיכרון',
-    description:
-      'כל שקיעה שראינו ביחד הייתה יפה יותר — כי אתה הייתה לצידי. הצבעים בשמיים היו יפים, אבל הפנים שלך היו היפות מכולם.'
+    title: 'שקיעות ביחד',
+    date: 'רגעים שקטים ומושלמים',
+    description: 'לשבת ביחד בשקיעה ולהסתכל על האופק — בלי מילים, בלי כלום. הרגעים האלה, הפשוטים והשקטים, הם הרגעים שאני אוהב הכי הרבה.',
+    photo: 'images/photo_035.jpg'
   },
   {
-    emoji: '💫',
-    title: 'הרגע שהבנתי שאני אוהב אותך',
-    date: 'הרגע שמשנה הכל',
-    description:
-      'הגיע רגע שבו פשוט הבנתי — את לא רק בת הזוג שלי. את האהבה שלי, השלמה שלי. הרגע ההוא שינה את הכל, ואני שמח שהגיע.'
+    emoji: '💋',
+    title: 'תאילנד — הנשיקה',
+    date: 'קיץ 2024',
+    description: 'על סירת זנב-ארוך בלב ים תאילנד, עם הסלעים הירוקים מסביב — הנשיקה הכי יפה שנשקתי. תאילנד הייתה קסם, אבל הקסם הכי גדול היית את.',
+    photo: 'images/photo_080.jpg'
   },
   {
-    emoji: '🏡',
-    title: 'הבית שיצרנו ביחד',
-    date: 'כי הבית זה את',
-    description:
-      'הבית הוא לא מקום — הבית זה את. איפה שאת, שם אני מרגיש בבית. תודה שנתת לי את הבית היפה ביותר שיכולתי לחלום עליו.'
+    emoji: '🏝️',
+    title: 'קו פי פי — מבט מלמעלה',
+    date: 'תאילנד 2024',
+    description: 'עמדנו על הפסגה ומבטנו השתרע על הכל — האי הירוק, הים הטורקיז, האופק האינסופי. ידעתי שבשום מקום בעולם לא הייתי מעדיף להיות — רק לצדה.',
+    photo: 'images/photo_175.jpg'
   },
   {
-    emoji: '🌟',
-    title: 'כל יום שלנו',
-    date: 'כל בוקר, כל לילה',
-    description:
-      'כל בוקר שאני מתעורר ואת לצידי — זו המתנה הכי גדולה שקיבלתי אי פעם. כל יום איתך הוא יום שאני שמח שנולדתי בשבילו. ❤️'
+    emoji: '🗾',
+    title: 'יפן — חלום שהתגשם',
+    date: 'סתיו 2025',
+    description: 'שינג\'וקו בלילה, קיוטו בשחר — כל פינה ביפן הייתה קסם אחר. ביחד חווינו מדינה שלמה של פלאים, ויצרנו זיכרונות שיישארו לנצח.',
+    photo: 'images/photo_140.jpg'
+  },
+  {
+    emoji: '⛵',
+    title: 'ים ושמיים',
+    date: 'יוון 2026',
+    description: 'פנים מחייכות, רוח ים, מים כחולים עד האופק — ובקרן הרחוקה ספינה שטה. רגע מושלם, קפוא בזמן, שניצרב לתמיד בזיכרון.',
+    photo: 'images/photo_185.jpg'
+  },
+  {
+    emoji: '💃',
+    title: 'ביחד, תמיד',
+    date: '2026',
+    description: 'לרקוד, לצחוק, לחגוג — ביחד הכל יותר שמח. כל מסיבה, כל אירוע, כל רגע הופך לזיכרון כשאת לצידי. זה הסיפור שלנו, וזה רק ממשיך.',
+    photo: 'images/photo_188.jpg'
   }
 ];
 
 // ─────────────────────────────────────────────
-//  📸  הוסף תמונות כאן!
-//  1. הוסף את קובץ התמונה לתיקיית images/
-//  2. הסר את ה-// מלפני השורה המתאימה
+//  תמונות רקע לכל סקשן
 // ─────────────────────────────────────────────
-const photos = [
-  // { src: 'images/photo1.jpg',  caption: 'הדייט הראשון שלנו 💕' },
-  // { src: 'images/photo2.jpg',  caption: 'הטיול שלנו ✈️' },
-  // { src: 'images/photo3.jpg',  caption: 'ערב מיוחד 🌹' },
-  // { src: 'images/photo4.jpg',  caption: 'חיוך שמאיר את העולם ✨' },
-  // { src: 'images/photo5.jpg',  caption: 'רגע מושלם 🌅' },
-  // { src: 'images/photo6.jpg',  caption: 'ביחד 🏡' },
-  // { src: 'images/photo7.jpg',  caption: 'אנחנו 💖' },
-  // { src: 'images/photo8.jpg',  caption: 'אהבה 🌟' },
-];
+const sectionBgs = {
+  'hero-bg':     'images/photo_175.jpg',  // Ko Phi Phi — breathtaking
+  'letter-bg':   'images/photo_080.jpg',  // Thailand kiss — romantic
+  'memories-bg': 'images/photo_065.jpg',  // River mountains
+  'closing-bg':  'images/photo_188.jpg',  // Dancing — latest & joyful
+};
+
+// ─────────────────────────────────────────────
+//  Gallery state
+// ─────────────────────────────────────────────
+const GALLERY_CHUNK = 30;
+let galleryOffset   = 0;
+let lbIndex         = 0;
+let currentPage     = 0;
 
 // ─────────────────────────────────────────────
 //  INIT
 // ─────────────────────────────────────────────
-let currentPage = 0;
-
 window.addEventListener('load', () => {
   initStars();
   initBalloons();
   initMouseTrail();
+  initSectionBgs();
   renderMemories();
   renderPhotos();
   initScrollAnimations();
@@ -97,59 +98,62 @@ window.addEventListener('load', () => {
 
   setTimeout(() => {
     document.getElementById('loading-screen').classList.add('hidden');
-    setTimeout(launchBirthdayConfetti, 600);
-  }, 1600);
+    setTimeout(launchBirthdayConfetti, 700);
+  }, 1700);
 });
+
+// ─────────────────────────────────────────────
+//  SECTION BACKGROUND PHOTOS
+// ─────────────────────────────────────────────
+function initSectionBgs() {
+  Object.entries(sectionBgs).forEach(([id, url]) => {
+    const el = document.getElementById(id);
+    if (el) el.style.backgroundImage = `url('${url}')`;
+  });
+}
 
 // ─────────────────────────────────────────────
 //  STARS (canvas)
 // ─────────────────────────────────────────────
 function initStars() {
   const canvas = document.getElementById('stars-canvas');
-  const ctx = canvas.getContext('2d');
+  const ctx    = canvas.getContext('2d');
 
-  const resize = () => {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-  };
+  const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
   resize();
   window.addEventListener('resize', resize);
 
   const stars = Array.from({ length: 220 }, () => ({
-    x:     Math.random() * canvas.width,
-    y:     Math.random() * canvas.height,
-    r:     Math.random() * 1.8 + 0.4,
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.8 + 0.4,
     alpha: Math.random(),
     speed: (Math.random() * 0.015 + 0.004) * (Math.random() < 0.5 ? 1 : -1)
   }));
 
-  // Occasional "shooting star"
-  function shootingStar() {
+  setInterval(() => {
     const x0 = Math.random() * canvas.width;
     const y0 = Math.random() * canvas.height * 0.5;
     let t = 0;
     const len = Math.random() * 120 + 60;
-    const angle = Math.PI / 5;
-
-    function drawShoot() {
+    const ang = Math.PI / 5;
+    (function shoot() {
       if (t > 1) return;
       t += 0.04;
       ctx.save();
-      ctx.globalAlpha = (1 - t) * 0.8;
+      ctx.globalAlpha = (1 - t) * 0.7;
       ctx.strokeStyle = '#ffd700';
       ctx.lineWidth = 1.5;
       ctx.beginPath();
       ctx.moveTo(x0, y0);
-      ctx.lineTo(x0 + len * t * Math.cos(angle), y0 + len * t * Math.sin(angle));
+      ctx.lineTo(x0 + len * t * Math.cos(ang), y0 + len * t * Math.sin(ang));
       ctx.stroke();
       ctx.restore();
-      requestAnimationFrame(drawShoot);
-    }
-    drawShoot();
-  }
-  setInterval(shootingStar, 4000);
+      requestAnimationFrame(shoot);
+    })();
+  }, 4000);
 
-  function draw() {
+  (function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     stars.forEach(s => {
       s.alpha += s.speed;
@@ -160,8 +164,7 @@ function initStars() {
       ctx.fill();
     });
     requestAnimationFrame(draw);
-  }
-  draw();
+  })();
 }
 
 // ─────────────────────────────────────────────
@@ -172,14 +175,13 @@ function initBalloons() {
   const items = ['🎈', '🎀', '💕', '🎊', '💝', '🎉', '💖', '🌸'];
 
   function createBalloon() {
-    const el = document.createElement('div');
+    const el  = document.createElement('div');
     el.className = 'balloon';
     el.textContent = items[Math.floor(Math.random() * items.length)];
-    const size = Math.random() * 28 + 28;
-    const dur  = Math.random() * 9 + 9;
+    const dur = Math.random() * 9 + 9;
     el.style.cssText = `
       left: ${Math.random() * 100}vw;
-      font-size: ${size}px;
+      font-size: ${Math.random() * 28 + 28}px;
       animation-duration: ${dur}s;
       animation-delay: ${Math.random() * 2}s;
     `;
@@ -202,22 +204,17 @@ function initMouseTrail() {
     const now = Date.now();
     if (now - last < 90) return;
     last = now;
-
     const el = document.createElement('div');
     el.className = 'sparkle-burst';
     el.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
-    el.style.cssText = `
-      left: ${e.clientX}px;
-      top:  ${e.clientY}px;
-      font-size: ${Math.random() * 14 + 16}px;
-    `;
+    el.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;font-size:${Math.random()*14+16}px;`;
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 900);
   });
 }
 
 // ─────────────────────────────────────────────
-//  MEMORIES BOOK
+//  MEMORIES BOOK (with photos)
 // ─────────────────────────────────────────────
 function renderMemories() {
   const pagesEl = document.getElementById('book-pages');
@@ -227,6 +224,10 @@ function renderMemories() {
     const page = document.createElement('div');
     page.className = 'book-page' + (i === 0 ? ' active' : '');
     page.innerHTML = `
+      ${m.photo ? `
+        <div class="memory-photo-wrap">
+          <img class="memory-photo" src="${m.photo}" alt="${m.title}" loading="lazy">
+        </div>` : ''}
       <span class="memory-emoji">${m.emoji}</span>
       <div class="memory-date">${m.date}</div>
       <h3 class="memory-title">${m.title}</h3>
@@ -261,45 +262,83 @@ function updateNavBtns() {
 }
 
 // ─────────────────────────────────────────────
-//  PHOTO GALLERY
+//  PHOTO GALLERY (lazy, chunked, with lightbox)
 // ─────────────────────────────────────────────
 function renderPhotos() {
+  loadMorePhotos();
+}
+
+function loadMorePhotos() {
   const gallery = document.getElementById('photo-gallery');
+  const btn     = document.getElementById('load-more-btn');
+  const chunk   = photos.slice(galleryOffset, galleryOffset + GALLERY_CHUNK);
 
-  const source = photos.length > 0 ? photos : null;
+  chunk.forEach((ph, localIdx) => {
+    const globalIdx = galleryOffset + localIdx;
+    const card = document.createElement('div');
+    card.className = 'photo-card animate-on-scroll';
+    card.innerHTML = `
+      <img src="${ph.src}" alt="${ph.caption}" loading="lazy">
+      ${ph.caption ? `<div class="photo-caption">${ph.caption}</div>` : ''}
+    `;
+    card.addEventListener('click', () => openLightbox(globalIdx));
+    gallery.appendChild(card);
 
-  if (!source) {
-    const placeholders = [
-      { emoji: '📸', label: 'תמונה ראשונה' },
-      { emoji: '🌹', label: 'זכרון מיוחד' },
-      { emoji: '💕', label: 'רגע קסום' },
-      { emoji: '✨', label: 'יחד' },
-      { emoji: '🌟', label: 'אהבה' },
-      { emoji: '🎊', label: 'חגיגה' },
-    ];
-    placeholders.forEach(p => {
-      const card = document.createElement('div');
-      card.className = 'photo-card';
-      card.innerHTML = `
-        <div class="photo-placeholder">
-          <span class="ph-emoji">${p.emoji}</span>
-          <span class="ph-label">${p.label}</span>
-        </div>
-      `;
-      gallery.appendChild(card);
-    });
-  } else {
-    source.forEach(ph => {
-      const card = document.createElement('div');
-      card.className = 'photo-card';
-      card.innerHTML = `
-        <img src="${ph.src}" alt="${ph.caption}" loading="lazy">
-        <div class="photo-caption">${ph.caption}</div>
-      `;
-      gallery.appendChild(card);
-    });
+    // Trigger observer for newly added cards
+    setTimeout(() => card.classList.add('visible'), 50 * localIdx);
+  });
+
+  galleryOffset += GALLERY_CHUNK;
+
+  if (galleryOffset >= photos.length) {
+    btn.style.display = 'none';
   }
 }
+
+// ─────────────────────────────────────────────
+//  LIGHTBOX
+// ─────────────────────────────────────────────
+function openLightbox(idx) {
+  lbIndex = idx;
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('open');
+  updateLightbox();
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if (e && e.target !== document.getElementById('lightbox') &&
+      !e.target.classList.contains('lb-close')) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function updateLightbox() {
+  const ph = photos[lbIndex];
+  document.getElementById('lb-img').src = ph.src;
+  document.getElementById('lb-caption').textContent = ph.caption || '';
+}
+
+function lbPrev(e) {
+  e.stopPropagation();
+  lbIndex = (lbIndex - 1 + photos.length) % photos.length;
+  updateLightbox();
+}
+
+function lbNext(e) {
+  e.stopPropagation();
+  lbIndex = (lbIndex + 1) % photos.length;
+  updateLightbox();
+}
+
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (lb.classList.contains('open')) {
+    if (e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
+    if (e.key === 'ArrowLeft')  lbNext({ stopPropagation: () => {} });
+    if (e.key === 'ArrowRight') lbPrev({ stopPropagation: () => {} });
+  }
+});
 
 // ─────────────────────────────────────────────
 //  SCROLL ANIMATIONS
@@ -307,11 +346,10 @@ function renderPhotos() {
 function initScrollAnimations() {
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.10 });
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => io.observe(el));
 
-  // Update nav dots
   const sections = document.querySelectorAll('.section');
   const navIo = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -332,6 +370,7 @@ function scrollToSection(idx) {
 
 function initKeyboardNav() {
   document.addEventListener('keydown', e => {
+    if (document.getElementById('lightbox').classList.contains('open')) return;
     const sections = document.querySelectorAll('.section');
     const cur = Math.round(window.scrollY / window.innerHeight);
     if (e.key === 'ArrowDown' && cur < sections.length - 1) scrollToSection(cur + 1);
@@ -342,7 +381,7 @@ function initKeyboardNav() {
 }
 
 // ─────────────────────────────────────────────
-//  FLOATING HEARTS (closing section)
+//  FLOATING HEARTS
 // ─────────────────────────────────────────────
 function startFloatingHearts() {
   const container = document.getElementById('floating-hearts');
@@ -353,12 +392,10 @@ function startFloatingHearts() {
     h.textContent = heartList[Math.floor(Math.random() * heartList.length)];
     const size = Math.random() * 18 + 20;
     h.style.cssText = `
-      position: absolute;
-      font-size: ${size}px;
-      left: ${Math.random() * 180 - 30}px;
-      bottom: 0;
-      animation: heartFloat ${Math.random() * 1 + 1.5}s ease forwards;
-      filter: drop-shadow(0 0 6px rgba(247,37,133,0.6));
+      position:absolute;font-size:${size}px;
+      left:${Math.random()*180-30}px;bottom:0;
+      animation:heartFloat ${Math.random()*1+1.5}s ease forwards;
+      filter:drop-shadow(0 0 6px rgba(247,37,133,.6));
     `;
     container.appendChild(h);
     setTimeout(() => h.remove(), 2500);
@@ -370,19 +407,17 @@ function startFloatingHearts() {
 // ─────────────────────────────────────────────
 function celebrate() {
   launchBirthdayConfetti();
-
-  // Extra sparkle burst across screen
-  const emojis = ['🎊', '🎉', '💕', '⭐', '✨', '🌟', '💖', '🎀'];
-  for (let i = 0; i < 35; i++) {
+  const emojis = ['🎊','🎉','💕','⭐','✨','🌟','💖','🎀'];
+  for (let i = 0; i < 40; i++) {
     setTimeout(() => {
       const el = document.createElement('div');
       el.className = 'sparkle-burst';
       el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
       el.style.cssText = `
-        left: ${Math.random() * window.innerWidth}px;
-        top:  ${Math.random() * window.innerHeight}px;
-        font-size: ${Math.random() * 22 + 20}px;
-        animation-duration: 1.1s;
+        left:${Math.random()*window.innerWidth}px;
+        top:${Math.random()*window.innerHeight}px;
+        font-size:${Math.random()*22+20}px;
+        animation-duration:1.1s;
       `;
       document.body.appendChild(el);
       setTimeout(() => el.remove(), 1200);
@@ -391,43 +426,40 @@ function celebrate() {
 }
 
 function launchBirthdayConfetti() {
-  const colors = ['#f72585', '#ffd700', '#ff69b4', '#7c3aed', '#00bcd4', '#ff6b6b', '#4ecdc4', '#a8ff3e'];
-
-  for (let i = 0; i < 130; i++) {
+  const colors = ['#f72585','#ffd700','#ff69b4','#7c3aed','#00bcd4','#ff6b6b','#4ecdc4','#a8ff3e'];
+  for (let i = 0; i < 150; i++) {
     setTimeout(() => {
       const el = document.createElement('div');
       el.className = 'confetti-piece';
       const size = Math.random() * 10 + 5;
       el.style.cssText = `
-        left: ${Math.random() * window.innerWidth}px;
-        width: ${size}px;
-        height: ${size}px;
-        background: ${colors[Math.floor(Math.random() * colors.length)]};
-        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
-        animation-duration: ${Math.random() * 2.5 + 2}s;
-        animation-delay: ${Math.random() * 0.6}s;
-        transform-origin: center;
+        left:${Math.random()*window.innerWidth}px;
+        width:${size}px;height:${size}px;
+        background:${colors[Math.floor(Math.random()*colors.length)]};
+        border-radius:${Math.random()>.5?'50%':'2px'};
+        animation-duration:${Math.random()*2.5+2}s;
+        animation-delay:${Math.random()*.6}s;
       `;
       document.body.appendChild(el);
       setTimeout(() => el.remove(), 5000);
-    }, i * 25);
+    }, i * 22);
   }
 }
 
 // ─────────────────────────────────────────────
-//  INJECT dynamic CSS keyframe (heartFloat)
+//  INJECT dynamic CSS keyframes
 // ─────────────────────────────────────────────
-(function injectStyles() {
+(function() {
   const s = document.createElement('style');
   s.textContent = `
     @keyframes heartFloat {
-      0%   { opacity: 1; transform: translateY(0) scale(1); }
-      100% { opacity: 0; transform: translateY(-110px) scale(1.5); }
+      0%   { opacity:1; transform:translateY(0) scale(1); }
+      100% { opacity:0; transform:translateY(-110px) scale(1.5); }
     }
     @keyframes sparkleAnim {
-      0%   { transform: scale(0) rotate(0deg); opacity: 1; }
-      55%  { transform: scale(1.3) rotate(200deg); opacity: 1; }
-      100% { transform: scale(0) rotate(380deg) translateY(-55px); opacity: 0; }
+      0%   { transform:scale(0) rotate(0deg); opacity:1; }
+      55%  { transform:scale(1.3) rotate(200deg); opacity:1; }
+      100% { transform:scale(0) rotate(380deg) translateY(-55px); opacity:0; }
     }
   `;
   document.head.appendChild(s);
