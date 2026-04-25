@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום הולדת שמח טל! 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Canvas -->
+    <canvas id="stars-canvas"></canvas>
+
+    <!-- Balloons Container -->
+    <div id="balloons-container"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-heart">💕</div>
+        <p class="loader-text">טוען אהבה...</p>
+    </div>
+
+    <!-- Section Navigation -->
+    <nav class="section-nav" id="section-nav">
+        <div class="nav-dot active" onclick="scrollToSection(0)" title="פתיחה"></div>
+        <div class="nav-dot" onclick="scrollToSection(1)" title="מכתב"></div>
+        <div class="nav-dot" onclick="scrollToSection(2)" title="זכרונות"></div>
+        <div class="nav-dot" onclick="scrollToSection(3)" title="אלבום"></div>
+        <div class="nav-dot" onclick="scrollToSection(4)" title="סיום"></div>
+    </nav>
+
+    <main id="app">
+
+        <!-- ==================== HERO ==================== -->
+        <section class="section" id="section-hero">
+            <div class="hero-inner">
+                <div class="cake-emoji animate-float">🎂</div>
+                <h1 class="hero-greeting">יום הולדת שמח</h1>
+                <h2 class="hero-name">
+                    <span class="name-letter" style="--i:0">ט</span><span class="name-letter" style="--i:1">ל</span>
+                    <span class="name-sep"> </span>
+                    <span class="name-heart" style="--i:3">💕</span>
+                </h2>
+                <p class="hero-sub">לקוצ'י שלי, אהבת חיי</p>
+                <div class="scroll-hint">
+                    <span class="scroll-text">גלול למטה</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+            <div class="hero-particles" id="hero-particles"></div>
+        </section>
+
+        <!-- ==================== LOVE LETTER ==================== -->
+        <section class="section" id="section-letter">
+            <div class="container">
+                <div class="letter-card animate-on-scroll">
+                    <div class="letter-icon">💌</div>
+                    <h2 class="section-heading">מכתב מהלב</h2>
+                    <div class="letter-body">
+                        <p class="letter-salutation">קוצ'י שלי היקרה,</p>
+                        <p>היום יום הולדתך, ואני רוצה שתדעי כמה את מיוחדת לי. מהרגע שנכנסת לחיי, הכל פשוט הפך ליותר יפה, יותר שלם, יותר נכון.</p>
+                        <p>כל בוקר שאני מתעורר לצדך הוא מתנה. כל חיוך שלך מאיר לי את היום. כל רגע שאנחנו ביחד — הוא הרגע שאני שומר הכי עמוק בלב.</p>
+                        <p>את לא רק בת הזוג שלי — את החברה הכי טובה שלי, השלמה שלי, הבית שלי.</p>
+                        <p class="letter-closing">אוהב אותך עד אינסוף ומעבר לכך,</p>
+                        <p class="letter-signature">איתי שלך ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== MEMORIES ==================== -->
+        <section class="section" id="section-memories">
+            <div class="container">
+                <h2 class="section-heading centered animate-on-scroll">הזכרונות שלנו 📖</h2>
+                <p class="section-sub centered animate-on-scroll">הרגעים שצבענו ביחד</p>
+                <div class="book-container animate-on-scroll">
+                    <div class="book" id="book">
+                        <div class="book-spine"></div>
+                        <div class="book-pages" id="book-pages"></div>
+                    </div>
+                    <div class="book-controls">
+                        <button class="book-btn" id="prev-btn" onclick="prevPage()" aria-label="הקודם">‹</button>
+                        <div class="page-indicator" id="page-indicator"></div>
+                        <button class="book-btn" id="next-btn" onclick="nextPage()" aria-label="הבא">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PHOTO ALBUM ==================== -->
+        <section class="section" id="section-photos">
+            <div class="container">
+                <h2 class="section-heading centered animate-on-scroll">האלבום שלנו 📸</h2>
+                <p class="section-sub centered animate-on-scroll">כל תמונה שווה אלף מילים של אהבה</p>
+                <div class="photo-gallery" id="photo-gallery"></div>
+                <p class="add-photos-note animate-on-scroll">✨ תמונות נוספות יגיעו בקרוב...</p>
+            </div>
+        </section>
+
+        <!-- ==================== CLOSING ==================== -->
+        <section class="section" id="section-closing">
+            <div class="closing-inner">
+                <div class="floating-hearts" id="floating-hearts"></div>
+                <h2 class="closing-title animate-on-scroll">שנה נפלאה קוצ'י! 🎉</h2>
+                <p class="closing-msg animate-on-scroll">
+                    מאחל לך שנה מלאה באהבה, שמחה, הרפתקאות, וחיוכים אינסופיים.
+                    <br>
+                    כל חלום שלך יתגשם, כי את ראויה לכל הטוב שבעולם.
+                    <br><br>
+                    ❤️ תמיד שלך, איתי ❤️
+                </p>
+                <button class="celebrate-btn animate-on-scroll" onclick="celebrate()">
+                    🎆 לחץ לחגוג! 🎆
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
